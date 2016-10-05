@@ -6,8 +6,8 @@
 </description>
     <link>http://feeeds.github.io/</link>
     <atom:link href="http://feeeds.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Oct 2016 17:19:43 -0400</pubDate>
-    <lastBuildDate>Wed, 05 Oct 2016 17:19:43 -0400</lastBuildDate>
+    <pubDate>Wed, 05 Oct 2016 17:20:58 -0400</pubDate>
+    <lastBuildDate>Wed, 05 Oct 2016 17:20:58 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -35,6 +35,17 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>17 20 52</title>
+        <description>&lt;p&gt;testing new post&lt;/p&gt;
+</description>
+        <pubDate>Wed, 05 Oct 2016 13:20:46 -0400</pubDate>
+        <link>http://feeeds.github.io/2016/10/05/17-20-52.html</link>
+        <guid isPermaLink="true">http://feeeds.github.io/2016/10/05/17-20-52.html</guid>
+        
         
       </item>
     
