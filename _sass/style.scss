@@ -25,6 +25,13 @@ body {
 	background-size: 10px;
 }
 
+.container {
+	margin: 0 auto;
+	@media (min-width: 600px) {
+		width: 560px;
+	}
+}
+
 header {
 	background-color: $darkgray;
 	color: white;
