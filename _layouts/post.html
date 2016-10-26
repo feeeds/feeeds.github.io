@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+(this is a post)
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <a class="link" href="{{ post.url | prepend: site.baseurl }}">
+          <span class="note-date">{{ page.date | date: "%b %-d, %Y" }}</span>
+        </a>
+        <div class="post-content" itemprop="articleBody">
+          {{ content }}
+        </div>
+
+</article>

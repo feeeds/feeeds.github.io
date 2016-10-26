@@ -1,0 +1,86 @@
+ @mixin sansserif {
+    font-family: 'Alegreya Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+ }
+
+ @mixin serif {
+    font-family: 'Crimson Text', serif;
+    -webkit-font-smoothing: antialiased;
+ }
+
+$darkgray: #212223;
+$lightgray: #FBFBFC;
+$lightblue: #B6DAE9;
+
+
+// CSS
+
+body {
+	@include serif;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0;
+	margin: 0;
+	background-image: url("/public/assets/dot-bg.png");
+	background-size: 10px;
+}
+
+header {
+	background-color: $darkgray;
+	color: white;
+	padding: 1em;
+	h1 {
+		color: $lightblue;
+		@include sansserif;
+		font-weight: 700;
+		font-size: 3.5em;
+	}
+	p {
+		font-style: italic;
+		font-weight: 400;
+		font-size: 1.5em;
+	}
+}
+
+#intro {
+	background-color: $lightgray;
+	padding: 2em 1em 1em;
+	overflow: hidden;
+	svg {
+		float: left;
+		margin-top: 4px;
+	}
+	.introtext {
+		margin-top: 0;
+		padding-left: 1.5em;
+	}
+	.comingsoon {
+		@include sansserif;
+		font-weight: 600;
+		font-size: 1.1em;
+	    margin: 1.75em 0 1.5em;
+	    padding-left: 1.4em;
+	}
+}
+
+#signup {
+	padding: 1em;
+}
+
+footer {
+	background-color: $darkgray;
+	padding: 1em;
+	a {
+		color: $lightgray;
+		text-decoration: none;
+		@include sansserif;
+		font-weight: 500;
+		display: inline-block;
+	    vertical-align: super;
+	    margin-left: .5em;
+		&:hover {
+			color: $lightblue;
+		}
+	}
+}
+
