@@ -121,7 +121,9 @@ header {
 
 #signup {
 	padding: 3em 1em 6em;
-	form {
+	form.hand {
+		display: none;
+		/*
 		background-color: white;
 		border: 2px solid black;
 		padding: 1em;
@@ -160,19 +162,45 @@ header {
 				background-color: black;
 			}
 		}
+		*/
+	}
+	/* Mailchimp */
+	#mc_embed_signup {
+		border: 2px solid black;
+		padding: .5em;
+		overflow: hidden;
+		h2 {
+			@include sansserif;
+			font-weight: bold;
+			margin-top: 0;
+		}
+		input[type="email"] {
+			border: 2px solid rgba($gray, .33);
+			font-size: 1em;
+			box-shadow: none;
+			@include sansserif;
+			font-weight: bold;
+			&:hover {
+				color: $darkgray;
+			}
+		}
+		input[type="submit"] {
+			background-color: $gray;
+			@include sansserif;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
 	}
 	@media (min-width: $medium) {
 		float: left;
 		width: 50%;
 		font-size: 1.35em;
 	    line-height: 1.4em;
+        margin-top: -6.3em;
 	    .container {
 	    	margin: 0;
 	    }
 	    form {
-	    	margin-left: 1em;
-	    	width: auto;
-	    	margin-top: -6.3em;
 	    	input, button {
 	    		float: left;
 	    		font-size: .6em;
