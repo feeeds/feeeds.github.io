@@ -131,6 +131,11 @@ header {
 		input[type="text"] {
 			border: 1px solid rgba($gray, .33);
 			width: 20em;
+			@include sansserif;
+			font-weight: bold;
+			&:hover {
+				color: $darkgray;
+			}
 		}
 		button {
 			outline: none;
