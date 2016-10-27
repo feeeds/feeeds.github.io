@@ -37,6 +37,7 @@ body {
 	background-size: 10px;
 	@media (min-width: 1200px) {
 		font-size: 1.1em;
+		line-height: 1.4em;
 	}
 	@media (min-width: 1500px) {
 		font-size: 1.15em;
@@ -107,7 +108,7 @@ header {
 		float: left;
 		width: 50%;
 		font-size: 1.2em;
-	    line-height: 1.4em;
+	    line-height: 1.6em;
 	    height: 50vh;
 	}
 }
