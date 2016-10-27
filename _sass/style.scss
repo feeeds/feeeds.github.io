@@ -133,7 +133,8 @@ header {
 		}
 		input[type="text"] {
 			border: 2px solid rgba($gray, .33);
-			width: 18em;
+			width: 17em;
+			box-shadow: none;
 			@include sansserif;
 			font-weight: bold;
 			&:hover {
