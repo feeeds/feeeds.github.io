@@ -96,6 +96,9 @@ header {
 	.introtext {
 		margin-top: 0;
 		padding-left: 1.5em;
+		font-size: 1.2em;
+	    padding-right: 1em;
+	    line-height: 1.6em;
 	}
 	.comingsoon {
 		@include sansserif;
@@ -110,6 +113,9 @@ header {
 		font-size: 1.2em;
 	    line-height: 1.6em;
 	    height: 50vh;
+	    .introtext {
+	    	font-size: 1em;
+	    }
 	}
 }
 
