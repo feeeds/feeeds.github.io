@@ -70,6 +70,9 @@ header {
 		font-weight: 700;
 		font-size: 3.5em;
 	}
+	svg {
+		margin: .25em 0 -.25em;
+	}
 	p {
 		font-style: italic;
 		font-weight: 400;
@@ -129,7 +132,7 @@ header {
 			cursor: pointer;
 		}
 		input[type="text"] {
-			border: 1px solid rgba($gray, .33);
+			border: 2px solid rgba($gray, .33);
 			width: 20em;
 			@include sansserif;
 			font-weight: bold;
@@ -139,7 +142,7 @@ header {
 		}
 		button {
 			outline: none;
-			border: 1px solid $gray;
+			border: 2px solid $gray;
 			background-color: $gray;
 			color: white;
 			@include sansserif;
