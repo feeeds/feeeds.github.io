@@ -1,3 +1,5 @@
+ // Mixins
+
  @mixin sansserif {
     font-family: 'Alegreya Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -8,12 +10,22 @@
     -webkit-font-smoothing: antialiased;
  }
 
+// Colors
+
+$gray: #62676C;
 $darkgray: #212223;
 $lightgray: #FBFBFC;
 $lightblue: #B6DAE9;
 
+// Media Queries
 
-// CSS
+$medium: 955px;
+
+// Styling
+
+div, form {
+	box-sizing: border-box;
+}
 
 body {
 	@include serif;
@@ -23,19 +35,35 @@ body {
 	margin: 0;
 	background-image: url("/public/assets/dot-bg.png");
 	background-size: 10px;
+	@media (min-width: 1200px) {
+		font-size: 1.1em;
+	}
+	@media (min-width: 1500px) {
+		font-size: 1.15em;
+	}
+	@media (min-width: 1800px) {
+		font-size: 1.2em;
+	}
 }
 
 .container {
 	margin: 0 auto;
-	@media (min-width: 600px) {
-		width: 560px;
+	max-width: 100%;
+	@media (min-width: 500px) {
+		width: 500px;
+	}
+}
+
+@media (min-width: $medium) {
+	.halfcontainer {
+		width: 50%;
 	}
 }
 
 header {
 	background-color: $darkgray;
 	color: white;
-	padding: 1em;
+	padding: 2em 1em 1em;
 	h1 {
 		color: $lightblue;
 		@include sansserif;
@@ -47,11 +75,15 @@ header {
 		font-weight: 400;
 		font-size: 1.5em;
 	}
+	@media (min-width: $medium) {
+		font-size: 1.4em;
+		padding-top: 3em;
+	}
 }
 
 #intro {
 	background-color: $lightgray;
-	padding: 2em 1em 1em;
+	padding: 3em 1em 1em;
 	overflow: hidden;
 	svg {
 		float: left;
@@ -68,15 +100,79 @@ header {
 	    margin: 1.75em 0 1.5em;
 	    padding-left: 1.4em;
 	}
+	@media (min-width: $medium) {
+		float: left;
+		width: 50%;
+		font-size: 1.2em;
+	    line-height: 1.4em;
+	    height: 50vh;
+	}
 }
 
 #signup {
-	padding: 1em;
+	padding: 3em 1em 6em;
+	form {
+		background-color: white;
+		border: 2px solid black;
+		padding: 1em;
+		width: 22em;
+	    max-width: 95%;
+	    overflow: hidden;
+		p {
+			@include sansserif;
+			font-weight: bold;
+			margin-top: 0;
+		}
+		input, button {
+			padding: 1em;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type="text"] {
+			border: 1px solid rgba($gray, .33);
+			width: 20em;
+		}
+		button {
+			outline: none;
+			border: 1px solid $gray;
+			background-color: $gray;
+			color: white;
+			@include sansserif;
+			font-weight: bold;
+			text-transform: uppercase;
+			float: right;
+			&:hover {
+				background-color: black;
+			}
+		}
+	}
+	@media (min-width: $medium) {
+		float: left;
+		width: 50%;
+		font-size: 1.35em;
+	    line-height: 1.4em;
+	    .container {
+	    	margin: 0;
+	    }
+	    form {
+	    	margin-left: 1em;
+	    	width: auto;
+	    	margin-top: -6.3em;
+	    	input, button {
+	    		float: left;
+	    		font-size: .6em;
+	    	}
+	    	button {
+	    		margin-left: .5em;
+	    	}
+	    }
+	}
 }
 
 footer {
-	background-color: $darkgray;
-	padding: 1em;
+	background-color: $gray;
+	padding: 1em 1em .75em;
+	clear: both;
 	a {
 		color: $lightgray;
 		text-decoration: none;
@@ -88,6 +184,12 @@ footer {
 		&:hover {
 			color: $lightblue;
 		}
+	}
+	@media (min-width: $medium) {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
 	}
 }
 
