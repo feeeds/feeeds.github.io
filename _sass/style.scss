@@ -87,11 +87,11 @@ header {
 
 #intro {
 	background-color: $lightgray;
-	padding: 3em 1em 1em;
+	padding: 2em 1em 1em;
 	overflow: hidden;
 	svg {
 		float: left;
-		margin-top: 4px;
+		margin-top: 6px;
 	}
 	.introtext {
 		margin-top: 0;
@@ -189,6 +189,9 @@ header {
 			@include sansserif;
 			font-weight: bold;
 			text-transform: uppercase;
+		}
+		.button {
+			-webkit-border-radius: 4px;
 		}
 	}
 
